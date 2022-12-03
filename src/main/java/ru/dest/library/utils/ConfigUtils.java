@@ -11,7 +11,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import ru.dest.library.exception.MissingConfigurationException;
 
-import static ru.dest.library.utils.ChatUtils.parseColor;
 
 /**
  * Some utils for loading and saving objects to config

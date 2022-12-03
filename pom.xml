@@ -6,7 +6,7 @@
 
     <groupId>ru.dest</groupId>
     <artifactId>DLibrary</artifactId>
-    <version>1.0-v1_12</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>DLibrary</name>
@@ -55,14 +55,14 @@
     </build>
 
     <repositories>
-<!--        <repository>-->
-<!--            <id>spigotmc-repo</id>-->
-<!--            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>-->
-<!--        </repository>-->
-<!--        <repository>-->
-<!--            <id>sonatype</id>-->
-<!--            <url>https://oss.sonatype.org/content/groups/public/</url>-->
-<!--        </repository>-->
+        <repository>
+            <id>spigotmc-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
+        <repository>
+            <id>sonatype</id>
+            <url>https://oss.sonatype.org/content/groups/public/</url>
+        </repository>
         <repository>
             <id>placeholderapi</id>
             <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
@@ -80,14 +80,8 @@
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
-            <artifactId>spigot</artifactId>
-            <version>1.13.2</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.spigotmc.</groupId>
-            <artifactId>spigot</artifactId>
-            <version>1.12.2</version>
+            <artifactId>spigot-api</artifactId>
+            <version>1.12.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
 
