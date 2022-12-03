@@ -11,10 +11,10 @@ import ru.dest.library.utils.Utils;
 
 import static ru.dest.library.utils.ChatUtils.sendMessage;
 
-public class ModernMessage {
+public class AdvancedMessage {
     private TextComponent message;
 
-    public ModernMessage(TextComponent message) {
+    public AdvancedMessage(TextComponent message) {
         this.message = message;
     }
 
@@ -24,7 +24,7 @@ public class ModernMessage {
      * @param value - Value for click action
      * @return this;
      */
-    public ModernMessage setClickEvent(ClickEvent.Action action, String value ){
+    public AdvancedMessage setClickEvent(ClickEvent.Action action, String value ){
         message.setClickEvent(new ClickEvent(action, value));
         return this;
     }
@@ -35,7 +35,7 @@ public class ModernMessage {
      * @param value - Value for hover action
      * @return this;
      */
-    public ModernMessage setHoverEvent(HoverEvent.Action action, BaseComponent[] value){
+    public AdvancedMessage setHoverEvent(HoverEvent.Action action, BaseComponent[] value){
         message.setHoverEvent(new HoverEvent(action, value));
         return this;
     }
@@ -49,10 +49,10 @@ public class ModernMessage {
 
     /**
      * Add additional message to this message.
-     * @param message - {@link ModernMessage} to add;
+     * @param message - {@link AdvancedMessage} to add;
      * @return this
      */
-    public ModernMessage add(ModernMessage message){
+    public AdvancedMessage add(AdvancedMessage message){
         this.message.addExtra(message.getMessageContent());
 
         return this;

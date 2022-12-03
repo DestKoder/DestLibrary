@@ -24,7 +24,6 @@ public final class ConfigUtils {
     public static String getKeyStringValueOrNull(@NotNull ConfigurationSection section,@NotNull String key){
         return section.isSet(key) && section.isString(key) ? section.getString(key) : null;
     }
-
     /* Working with locations */
 
     /**

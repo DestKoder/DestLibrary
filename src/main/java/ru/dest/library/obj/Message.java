@@ -66,8 +66,8 @@ public class Message {
      *
      * @return moder version of this message
      */
-    public ModernMessage createModernVersion(){
-        return new ModernMessage(new TextComponent(value));
+    public AdvancedMessage createModernVersion(){
+        return new AdvancedMessage(new TextComponent(value));
     }
 
     /**

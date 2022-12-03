@@ -71,11 +71,21 @@
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
         </repository>
+        <repository>
+            <id>local</id>
+            <url>file:C://programming/maven-repo</url>
+        </repository>
     </repositories>
 
     <dependencies>
         <dependency>
-            <groupId>server-core</groupId>
+            <groupId>org.spigotmc</groupId>
+            <artifactId>spigot</artifactId>
+            <version>1.13.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.spigotmc.</groupId>
             <artifactId>spigot</artifactId>
             <version>1.12.2</version>
             <scope>provided</scope>
@@ -100,13 +110,6 @@
             <artifactId>reflections</artifactId>
             <version>0.10.2</version>
         </dependency>
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.30</version>
-        </dependency>
-
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>

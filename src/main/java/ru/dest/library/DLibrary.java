@@ -1,6 +1,5 @@
 package ru.dest.library;
 
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
@@ -8,7 +7,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.inventory.InventoryDragEvent;
 import org.bukkit.plugin.Plugin;
-import org.bukkit.plugin.java.JavaPlugin;
+import ru.dest.library.bukkit.BukkitPlugin;
 import ru.dest.library.gui.GUI;
 import ru.dest.library.integration.IntegrationManager;
 import ru.dest.library.integration.placeholderapi.PlaceholdersIntegration;
@@ -16,7 +15,7 @@ import ru.dest.library.integration.vault.EconomyIntegration;
 import ru.dest.library.integration.vault.VaultChatIntegration;
 import ru.dest.library.utils.ReflectionUtils;
 
-public final class DLibrary extends JavaPlugin implements Listener, CommandExecutor {
+public final class DLibrary extends BukkitPlugin<DLibrary> implements Listener{
     private IntegrationManager integrationManager;
 
     @EventHandler
@@ -56,8 +55,7 @@ public final class DLibrary extends JavaPlugin implements Listener, CommandExecu
         integrationManager.registerIntegration(VaultChatIntegration.REGISTRY_NAME, new VaultChatIntegration());
         integrationManager.registerIntegration(EconomyIntegration.REGISTRY_NAME, new EconomyIntegration());
 
-        getServer().getPluginManager().registerEvents(this,this);
-        getCommand("test").setExecutor(this);
+        utils().registerHandlers(this);
     }
     @Override
     public void onDisable() {

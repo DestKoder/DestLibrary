@@ -39,7 +39,7 @@ public final class Lang<T extends JavaPlugin> extends Config<T>{
 
     @NotNull
     public String getSMessage(String key){
-        return parseColor(getString(key));
+        return parseColor(prefix + getString(key));
     }
 
     @NotNull

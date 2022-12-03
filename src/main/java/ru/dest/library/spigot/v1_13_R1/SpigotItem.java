@@ -1,10 +1,11 @@
-package ru.dest.library.spigot.v1_12_R1;
+package ru.dest.library.spigot.v1_13_R1;
 
-import net.minecraft.server.v1_12_R1.ItemStack;
-import org.bukkit.craftbukkit.v1_12_R1.inventory.CraftItemStack;
+import net.minecraft.server.v1_13_R2.ItemStack;
+import org.bukkit.craftbukkit.v1_13_R2.inventory.CraftItemStack;
 import org.jetbrains.annotations.Nullable;
 
-public final class SpigotItem implements ru.dest.library.spigot.SpigotItem {
+public class SpigotItem implements ru.dest.library.spigot.SpigotItem {
+
     private ItemStack item;
 
     public SpigotItem(org.bukkit.inventory.ItemStack item){
@@ -77,15 +78,15 @@ public final class SpigotItem implements ru.dest.library.spigot.SpigotItem {
     @Override
     @Nullable
     public String getStringTagValue(String key){
-         if(!hasTag(key)) return null;
-         else return item.getTag().getString(key);
+        if(!hasTag(key)) return null;
+        else return item.getTag().getString(key);
     }
 
     @Override
     @Nullable
     public Integer getIntegerTagValue(String key){
-         if(!hasTag(key)) return null;
-         else return item.getTag().getInt(key);
+        if(!hasTag(key)) return null;
+        else return item.getTag().getInt(key);
     }
 
     @Override
