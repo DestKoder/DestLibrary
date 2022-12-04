@@ -1,5 +1,9 @@
 package ru.dest.library.exception;
 
+/**
+ * @since 1.0
+ * @author DestKoder
+ */
 public class RegistratorInitException extends Exception{
 
     private Exception error;

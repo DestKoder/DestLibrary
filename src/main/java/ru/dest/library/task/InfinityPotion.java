@@ -9,6 +9,12 @@ import org.bukkit.scheduler.BukkitRunnable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Task class for Infinity potion effect
+ *
+ * @since 1.0
+ * @author DestKoder
+ */
 public class InfinityPotion extends BukkitRunnable {
 
     protected PotionEffectType potion;

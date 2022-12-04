@@ -9,6 +9,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+/**
+ * This class represents a basic PlaceholderExpansion and allows to register placeholder in code
+ *
+ * @since 1.0
+ * @author DestKoder
+ */
 public class PlaceholdersProvider extends PlaceholderExpansion {
 
     private final String identifier;
@@ -23,6 +29,11 @@ public class PlaceholdersProvider extends PlaceholderExpansion {
         this.version = version;
     }
 
+    /**
+     * Register a new placeholder for indentifier
+     * @param placeholder placeholder for register
+     * @param replaceTo function which returns a text on which placeholder will be replaced
+     */
     public void registerPlaceholder(String placeholder, Function<Player, String> replaceTo){
         this.placeholders.put(placeholder, replaceTo);
     }

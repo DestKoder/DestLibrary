@@ -9,11 +9,16 @@ import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import ru.dest.library.obj.Entry;
+import ru.dest.library.obj.Pair;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Some utils for working with chat, sending message in it
+ * @since 1.0
+ * @author DestKoder
+ */
 public final class ChatUtils {
 
     private static boolean hookPlaceholder;
@@ -22,10 +27,20 @@ public final class ChatUtils {
         hookPlaceholder = Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null;
     }
 
+    /**
+     * Parse color symbols in string
+     * @param s - string for parse
+     * @return parsed string
+     */
     public static String parseColor(String s){
         return ChatColor.translateAlternateColorCodes('&', s);
     }
 
+    /**
+     * Parse color symbols in string list
+     * @param l - string list for parse
+     * @return return parsed string list
+     */
     public static List<String> parseColor(List<String> l){
         List<String> toReturn = new ArrayList<>();
 
@@ -52,13 +67,13 @@ public final class ChatUtils {
     /**
      * Format a message
      * @param message {@link String} message which will be formatted
-     * @param format {@link List<Entry<String, String>} list of format keys & values
+     * @param format {@link List< Pair <String, String>} list of format keys & values
      * @return formatted message
      */
-    public static String formatMessage(String message, List<Entry<String, String>> format){
+    public static String formatMessage(String message, List<Pair<String, String>> format){
 
-        for(Entry<String, String> entry : format){
-            message = message.replaceAll("\\{"+entry.getFirstVal()+"}", entry.getSecondVal());
+        for(Pair<String, String> pair : format){
+            message = message.replaceAll("\\{"+ pair.getFirstVal()+"}", pair.getSecondVal());
         }
 
         return message;

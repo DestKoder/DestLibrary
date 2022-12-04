@@ -1,5 +1,11 @@
 package ru.dest.library.cooldown;
 
+/**
+ * This class represents a information of cooldown
+ *
+ * @since 1.0
+ * @author DestKoder
+ */
 public class CooldownData {
 
     private final String action;

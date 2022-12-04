@@ -9,6 +9,12 @@ import ru.dest.library.utils.Utils;
 
 import java.util.*;
 
+/**
+ * This class represents a manager for memory-stored cooldowns
+ *
+ * @since 1.0
+ * @author DestKoder
+ */
 public class Cooldowns {
 
     private BukkitPlugin<?> plugin;

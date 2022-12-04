@@ -8,21 +8,18 @@ import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 import ru.dest.library.exception.MissingConfigurationException;
 
 
 /**
  * Some utils for loading and saving objects to config
+ *
+ * @since 1.0
+ * @author DestKoder
  */
 
 public final class ConfigUtils {
 
-    /* Some Utils */
-    @Nullable
-    public static String getKeyStringValueOrNull(@NotNull ConfigurationSection section,@NotNull String key){
-        return section.isSet(key) && section.isString(key) ? section.getString(key) : null;
-    }
     /* Working with locations */
 
     /**

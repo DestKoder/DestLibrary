@@ -25,6 +25,11 @@ public final class Utils {
                 Integer.valueOf( hex.substring( 5, 7 ), 16 ));
     }
 
+    /**
+     * Transforms string array to a single string
+     * @param args - array of strings
+     * @return resulting string
+     */
     public static String argsToMessage(String[] args){
         StringBuilder sb = new StringBuilder();
 
@@ -36,6 +41,12 @@ public final class Utils {
         return sb.toString().trim();
     }
 
+    /**
+     * Transforms string array to a single string with start position
+     * @param args - array of strings
+     * @param startPos - number of the element from which need start
+     * @return resulting string
+     */
     public static String argsToMessage(String[] args, int startPos){
         StringBuilder sb = new StringBuilder();
 
@@ -54,10 +65,21 @@ public final class Utils {
         return System.currentTimeMillis()/1000;
     }
 
+    /**
+     * Execute method if player has permission
+     * @param player player to check for permission
+     * @param permission permission to check
+     * @param function methods which will execute
+     */
     public static void executeIfHas(Player player, String permission, Consumer<Player> function){
         if(player.hasPermission(permission)) function.accept(player);
     }
 
+    /**
+     * Calculate left time for pointed timestamp
+     * @param expires - timestamp
+     * @return 0 if the specified time has already passed or the number of seconds before it
+     */
     public static long calcLeftTime(long expires){
         long current = getCurrentTimeInSeconds();
 

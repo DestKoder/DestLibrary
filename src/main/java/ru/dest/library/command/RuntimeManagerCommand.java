@@ -7,6 +7,13 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class represents a command-manager which can be registered in runtime
+ * @param <T> your plugin main class
+ *
+ * @since 1.0
+ * @author DestKoder
+ */
 public class RuntimeManagerCommand<T extends JavaPlugin> extends RuntimePluginCommand<T> {
 
     private final List<SubCommand<T>> subCommands;
@@ -68,14 +75,26 @@ public class RuntimeManagerCommand<T extends JavaPlugin> extends RuntimePluginCo
         return toReturn;
     }
 
+    /**
+     * Method for adding SubCommand to this command manager
+     * @param command {@link SubCommand} to add
+     */
     protected void addSubCommand(SubCommand<T> command){
         this.subCommands.add(command);
     }
 
+    /**
+     * Sets help message;
+     * @param help help message
+     */
     public void setHelp(String[] help){
         this.helpMessage = help;
     }
 
+    /**
+     * This method sets message, which sends to a CommandSender when command which it specified doesn't exists
+     * @param message new message
+     */
     public void setSubCommandNotExistsMessage(String message){
         this.msgSubCommandNotExists = message;
     }

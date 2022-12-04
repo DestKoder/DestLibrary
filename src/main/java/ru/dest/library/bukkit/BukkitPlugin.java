@@ -7,6 +7,13 @@ import ru.dest.library.exception.RegistratorInitException;
 import ru.dest.library.registry.CommandRegistry;
 import ru.dest.library.task.TaskManager;
 
+/**
+ * Entry point in your plugin
+ * @param <T> - Your plugin class
+ *
+ * @since 1.0
+ * @author DestKoder
+ */
 public class BukkitPlugin<T extends JavaPlugin> extends JavaPlugin {
     private TaskManager<T> taskManager;
     private BukkitUtils<T> utils;
@@ -33,11 +40,17 @@ public class BukkitPlugin<T extends JavaPlugin> extends JavaPlugin {
     @Override
     public void onDisable() {
         taskManager.onDisable();
-
         HandlerList.unregisterAll(this);
     }
 
+    /**
+     * @return {@link TaskManager} object for your plugin;
+     */
     public TaskManager<T> getTaskManager(){return taskManager;}
+
+    /**
+     * @return server {@link PluginManager}
+     */
     public PluginManager getPluginManager() {return getServer().getPluginManager();}
     public BukkitUtils<T> utils() {return utils;}
     public CommandRegistry<T> commandRegistry() {return commandRegister;}

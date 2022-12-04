@@ -5,6 +5,13 @@ import org.bukkit.event.Listener;
 import org.bukkit.permissions.Permission;
 import org.bukkit.plugin.java.JavaPlugin;
 
+/**
+ * Provides some utils for register handlers, permissions and calling events
+ * @param <T> your plugin main class
+ *
+ * @since 1.0
+ * @author DestKoder
+ */
 public class BukkitUtils<T extends JavaPlugin> {
 
     private final BukkitPlugin<T> plugin;

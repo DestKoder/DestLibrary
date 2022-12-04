@@ -10,6 +10,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * This class represents a cover for plugin.yml commands.
+ * @param <T> your plugin main class
+ *
+ * @since 1.0
+ * @author DestKoder
+ */
 public abstract class AbstractPluginCommand<T extends JavaPlugin> implements CommandExecutor, TabCompleter {
 
     protected final T plugin;
@@ -24,7 +31,6 @@ public abstract class AbstractPluginCommand<T extends JavaPlugin> implements Com
      * Method executing when Player or Console perform command
      * @param data - {@link CommandData}
      * @param args - command arguments
-     * @return true if command complete or false if not
      */
     public abstract void execute(CommandData data, String[] args);
 

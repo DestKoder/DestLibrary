@@ -1,11 +1,16 @@
 package ru.dest.library.obj;
 
-public class Entry<T, A> {
+/**
+ * Simple class for stored key-value pairs
+ * @param <T> Key class
+ * @param <A> Value class
+ */
+public class Pair<T, A> {
 
     private T firstVal;
     private A secondVal;
 
-    public Entry(T firstVal, A secondVal) {
+    public Pair(T firstVal, A secondVal) {
         this.firstVal = firstVal;
         this.secondVal = secondVal;
     }

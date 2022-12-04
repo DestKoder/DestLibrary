@@ -16,6 +16,12 @@ import java.util.function.Consumer;
 
 import static ru.dest.library.utils.ChatUtils.parseColor;
 
+/**
+ * This class represent a template of gui, loading from config
+ *
+ * @since 1.0
+ * @author DestKoder
+ */
 public class GUITemplate {
 
     private static final String PLAYER_CMD = "[player]";

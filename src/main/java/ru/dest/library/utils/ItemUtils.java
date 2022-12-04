@@ -156,17 +156,6 @@ public final class ItemUtils {
         return potion;
     }
 
-    @NotNull
-    public static ItemStack createHead(OfflinePlayer owner){
-        ItemStack head = new ItemStack(Material.SKULL_ITEM, 0, (short)3);
-        SkullMeta meta = (SkullMeta) head.getItemMeta();
-
-        meta.setOwningPlayer(owner);
-
-        head.setItemMeta(meta);
-        return head;
-    }
-
     /**
      * Apply enchantments to item
      * @param item - item to apply

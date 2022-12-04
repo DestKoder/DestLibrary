@@ -11,6 +11,10 @@ import ru.dest.library.obj.IHoldItemStack;
 import java.util.List;
 import java.util.function.BiConsumer;
 
+/**
+ * This class represents a basic object-list gui
+ * @param <Object> Object Class which realizing interface IHoldItemStack
+ */
 public class ObjectListGUI<Object extends IHoldItemStack> extends GUI{
 
     protected List<Object> items;

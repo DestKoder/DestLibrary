@@ -19,6 +19,12 @@ import java.util.function.Consumer;
 import static ru.dest.library.utils.ChatUtils.applyPlaceholders;
 import static ru.dest.library.utils.ChatUtils.parseColor;
 
+/**
+ * This class represents a basic chest-inventory GUI
+ *
+ * @since 1.0
+ * @author DestKoder
+ */
 public abstract class GUI implements InventoryHolder {
 
     protected final GUITemplate template;
@@ -41,6 +47,11 @@ public abstract class GUI implements InventoryHolder {
         });
     }
 
+    /**
+     * Add handler on slot specified in config
+     * @param configName name of slot in config
+     * @param consumer handler
+     */
     protected void addClickHandler(String configName, Consumer<InventoryClickEvent> consumer){
         clickHandlers.put(configName, consumer);
     }
@@ -100,7 +111,6 @@ public abstract class GUI implements InventoryHolder {
     }
 
     public void show(){
-        this.opener.closeInventory();
         this.opener.openInventory(this.inventory);
     }
 }

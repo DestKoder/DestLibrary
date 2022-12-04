@@ -11,6 +11,12 @@ import java.util.List;
 import static ru.dest.library.utils.ChatUtils.formatMessage;
 import static ru.dest.library.utils.ChatUtils.sendMessage;
 
+/**
+ * This class represent a message stored in lang file
+ *
+ * @since 1.0
+ * @author DestKoder
+ */
 public class Message {
 
     private String value;
@@ -21,10 +27,10 @@ public class Message {
 
     /**
      * Format message text
-     * @param format - list of {@link Entry<String,String>} pairs of key and value
+     * @param format - list of {@link Pair <String,String>} pairs of key and value
      * @return formatted {@link Message};
      */
-    public Message format(List<Entry<String, String>> format){
+    public Message format(List<Pair<String, String>> format){
         return new Message(formatMessage(value, format));
     }
 

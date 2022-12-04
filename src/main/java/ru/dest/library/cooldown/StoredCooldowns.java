@@ -12,6 +12,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+/**
+ * This class represents a manager for file-stored cooldowns
+ *
+ * @since 1.0
+ * @author DestKoder
+ */
 public class StoredCooldowns extends Cooldowns{
 
     private File data;

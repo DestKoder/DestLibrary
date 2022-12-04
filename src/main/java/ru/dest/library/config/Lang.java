@@ -3,7 +3,7 @@ package ru.dest.library.config;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
-import ru.dest.library.obj.Entry;
+import ru.dest.library.obj.Pair;
 import ru.dest.library.obj.Message;
 
 import java.util.ArrayList;
@@ -12,10 +12,14 @@ import java.util.List;
 import static ru.dest.library.utils.ChatUtils.applyPlaceholders;
 import static ru.dest.library.utils.ChatUtils.parseColor;
 
+/**
+ * Represents a lang configuration of plugin
+ * @param <T> your plugin main classname
+ */
 public final class Lang<T extends JavaPlugin> extends Config<T>{
 
     private String prefix;
-    private final List<Entry<String, String>> replacements = new ArrayList<>();
+    private final List<Pair<String, String>> replacements = new ArrayList<>();
 
     public Lang(T plugin, String filePath) {
         super(plugin, filePath);
@@ -32,7 +36,7 @@ public final class Lang<T extends JavaPlugin> extends Config<T>{
         if(isSet("formats") && isConfigurationSection("formats")){
             for(String s : getConfigurationSection("formats").getKeys(false)){
                 if(isConfigurationSection("formats."+s)) continue;
-                this.replacements.add(new Entry<>(s, getString("formats."+s)));
+                this.replacements.add(new Pair<>(s, getString("formats."+s)));
             }
         }
     }

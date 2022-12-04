@@ -11,6 +11,12 @@ import ru.dest.library.utils.Utils;
 
 import static ru.dest.library.utils.ChatUtils.sendMessage;
 
+/**
+ * This class represent a message with custom click & hover events
+ *
+ * @since 1.0
+ * @author DestKoder
+ */
 public class AdvancedMessage {
     private TextComponent message;
 

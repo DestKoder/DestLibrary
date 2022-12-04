@@ -10,6 +10,15 @@ import ru.dest.library.bukkit.BukkitPlugin;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This Class is designed to work with multithreading and parallel requests. <br>
+ *
+ * An object of this class has already been created for each BukkitPlugin, you can get it via BukkitPlugin.getTaskManager();
+ * @param <T> - your main class
+ *
+ * @since 1.0
+ * @author DestKoder
+ */
 public class TaskManager<T extends JavaPlugin> {
 
     private final BukkitPlugin<T> plugin;

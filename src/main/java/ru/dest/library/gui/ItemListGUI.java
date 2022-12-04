@@ -9,6 +9,12 @@ import org.bukkit.inventory.ItemStack;
 import java.util.List;
 import java.util.function.BiConsumer;
 
+/**
+ * This class represents a basic listing gui
+ *
+ * @since 1.0
+ * @author DestKoder
+ */
 public class ItemListGUI extends GUI{
 
     protected List<ItemStack> items;

@@ -11,6 +11,13 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * This class represent a command which can be registered in runtime.
+ * @param <T> your plugin main class
+ *
+ * @since 1.0
+ * @author DestKoder
+ */
 public abstract class RuntimePluginCommand<T extends JavaPlugin> extends Command implements PluginIdentifiableCommand {
     protected final T plugin;
 
@@ -25,6 +32,11 @@ public abstract class RuntimePluginCommand<T extends JavaPlugin> extends Command
         this.setAliases(Arrays.asList(aliases));
     }
 
+    /**
+     *
+     * @param data {@link CommandData} of this command,
+     * @param arguments list of arguments
+     */
     public abstract void execute(CommandData data, String[] arguments);
 
     @Override
