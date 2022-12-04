@@ -58,4 +58,12 @@ public final class Utils {
         if(player.hasPermission(permission)) function.accept(player);
     }
 
+    public static long calcLeftTime(long expires){
+        long current = getCurrentTimeInSeconds();
+
+        if(current >= expires){
+            return 0;
+        }else return expires - current;
+    }
+
 }

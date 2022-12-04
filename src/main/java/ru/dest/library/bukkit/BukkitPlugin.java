@@ -39,8 +39,6 @@ public class BukkitPlugin<T extends JavaPlugin> extends JavaPlugin {
 
     public TaskManager<T> getTaskManager(){return taskManager;}
     public PluginManager getPluginManager() {return getServer().getPluginManager();}
-
     public BukkitUtils<T> utils() {return utils;}
-
     public CommandRegistry<T> commandRegistry() {return commandRegister;}
 }
