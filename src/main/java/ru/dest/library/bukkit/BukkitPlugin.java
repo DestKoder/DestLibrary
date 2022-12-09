@@ -73,6 +73,8 @@ public class BukkitPlugin<T extends JavaPlugin> extends JavaPlugin {
 
         if(info != null) {
             DLibrary.r(new PInfo(info.name(), info.version(), info.author()));
+        }else {
+            DLibrary.r(new PInfo(getDescription().getName(), getDescription().getVersion(), getDescription().getAuthors().get(0)));
         }
     }
 }
