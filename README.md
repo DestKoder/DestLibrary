@@ -30,9 +30,6 @@
 <h2>Использование библиотеки</h2>
 
 ```java
-
-import java.security.Permission;
-
 public class MyPlugin extends BukkitPlugin<MyPlugin> {
 
     @Override
