@@ -7,7 +7,7 @@
 
 <h2>Подключение библиотеки</h2>
 <hr>
-Подключение при помощи maven (Текущая версия - 1.1.0):
+Подключение при помощи maven (Текущая версия - 1.2.0):
 
 ```xml
 <repositories>
@@ -36,22 +36,18 @@ import java.security.Permission;
 public class MyPlugin extends BukkitPlugin<MyPlugin> {
 
     @Override
-    public void onLoad() {
-        super.onLoad();
+    public void onLoading() {
+        //Calling when plugin loading
     }
 
     @Override
-    public void onEnable() {
-        super.onEnable();
-
-        //Your code here
+    public void onEnabling() {
+        //Calling when plugin enabling
     }
 
     @Override
-    public void onDisable() {
-        super.onDisable();
-
-        //Your code here
+    public void onDisabling() {
+        //Calling when plugin disabling
     }
 }
 ```
