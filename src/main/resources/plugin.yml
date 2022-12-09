@@ -6,6 +6,3 @@ softdepend: [ Vault, PlaceholderAPI ]
 authors: [ DestKoder ]
 description: Some utils and tools for Dest's plugins
 website: https://github.com/DestKoder/DLibrary.git
-commands:
-  test:
-    usage: /test
