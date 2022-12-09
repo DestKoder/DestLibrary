@@ -54,17 +54,11 @@ public final class DLibrary extends BukkitPlugin<DLibrary> implements Listener{
 
     @Override
     public void onEnabling() {
-        super.onEnable();
         System.out.println(ReflectionUtils.getCraftBukkitVersion());
 
         getPluginManager().registerEvents(this, this);
 
         commandRegistry().registerCommand(new C(this));
-    }
-
-    @Override
-    public void onDisabling() {
-        HandlerList.unregisterAll((Plugin) this);
     }
 
     public static void r(PInfo info){

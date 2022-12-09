@@ -31,9 +31,15 @@ public class BukkitPlugin<T extends JavaPlugin> extends JavaPlugin {
         this.onLoading();
     }
 
-    public void onLoading(){};
-    public void onEnabling() {};
-    public void onDisabling() {};
+    public void onLoading(){
+        return;
+    };
+    public void onEnabling() {
+        return;
+    };
+    public void onDisabling() {
+        return;
+    };
     @Override
     public final void onEnable() {
         this.taskManager = new TaskManager<>(this);
